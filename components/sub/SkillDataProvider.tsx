@@ -37,6 +37,7 @@ src={src}
 width={width}
 height={height}
 alt='skill image'
+className='h-12 w-auto sm:h-20'
     />
   </motion.div>
   )

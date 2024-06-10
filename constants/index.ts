@@ -1,3 +1,6 @@
+export const message = 'Hello! I would like to know more about your services.';
+export const phoneNumber = '+917992383055';
+
 export const Skill_data = [
     {
       skill_name: "Html 5",
@@ -82,16 +85,19 @@ export const Skill_data = [
   
   export const Socials = [
     {
-      name: "Discord",
-      src: "/instagram.svg",
+      name: "Dial",
+      src: "/phone.svg",
+      link: `tel:${phoneNumber}`
     },
     {
-      name: "Facebook",
-      src: "/facebook.svg",
+      name: "Whatsapp",
+      src: "/whatsapp-2.svg",
+      link: `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     },
     {
       name: "Instagram",
-      src: "/discord.svg",
+      src: "/instagram.svg",
+      link: "https://www.instagram.com/rockingmanas78/"
     },
   ];
   
@@ -252,6 +258,33 @@ export const Skill_data = [
   ];
   
   
+export const serviceData = [
+  {
+    src: "/website.jpg",
+    title: "Website Development",
+    description: "Responsive and scalable website for your business which is SEO friendly for good marketing purposes.",
+  },
+  {
+    src: "/mobile-app.jpg",
+    title: "App Development",
+    description: "More handy and customised experience for your customers.",
+  },
+  {
+    src: "/erp.jpg",
+    title: "Admin Dashboard / ERP",
+    description: "Tracking your business and managing your employees.",
+  },
+  {
+    src: "/software-development.jpg",
+    title: "Customised Software",
+    description: "Depending upon your needs to ease your business with automation.",
+  },
+  {
+    src: "/design.jpg",
+    title: "UI/UX and Poster Designing",
+    description: "Designing intuitive user interfaces and creating captivating posters.",
+  },
+];
   
   
-  
+

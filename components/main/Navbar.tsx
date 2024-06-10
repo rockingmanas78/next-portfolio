@@ -1,8 +1,18 @@
 import { Socials } from "@/constants";
 import Image from "next/image";
 import React from "react";
+import { phoneNumber, message } from "@/constants";
 
 const Navbar = () => {
+
+  const handleWhatsapp = () => {
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.location.href = url;
+  };
+
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
   return (
     <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[5px] sm:px-[10px]">
@@ -39,13 +49,14 @@ const Navbar = () => {
 
         <div className="flex flex-row gap-5">
           {Socials.map((social) => (
+            <a href={social.link} target="_blank" key={social.name} rel="noopener noreferrer">
             <Image
               src={social.src}
               alt={social.name}
-              key={social.name}
               width={24}
               height={24}
-            />
+              />
+            </a>
           ))}
         </div>
       </div>
